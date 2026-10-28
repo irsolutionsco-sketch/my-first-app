@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Balance — Your daily calorie companion</title><style>
+:root{--green:#28664d;--ink:#253b31;--muted:#829087;--line:#e9ede7;--bg:#f7f8f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px 'DM Sans',Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}aside{width:237px;background:#fff;position:fixed;inset:0 auto 0 0;border-right:1px solid var(--line);padding:39px 26px}.brand{display:flex;gap:10px;align-items:center;font:800 30px Manrope,Arial,sans-serif;text-decoration:none;color:var(--green)}.brand-dot{color:#e0a677}.workspace{font-size:10px;letter-spacing:2px;color:#a0aaa2;margin:55px 12px 18px}.nav{width:100%;border:0;background:none;padding:15px 16px;display:flex;gap:15px;text-align:left;color:#7a887e;border-radius:9px;margin:5px 0;font-size:16px}.nav span{font-size:13px}.nav.active{background:#edf3ea;color:var(--green);font-weight:700}.sidebar-bottom{position:absolute;bottom:28px;left:27px;right:27px}.leaf{font-size:42px;color:#7d9d79;margin-bottom:13px}.sidebar-bottom>strong{font-size:12px}.sidebar-bottom p{font-size:12px;color:var(--muted);line-height:1.8}.profile{display:flex;gap:12px;align-items:center;border-top:1px solid var(--line);padding-top:23px;margin-top:29px}.avatar{background:#eee6d6;border-radius:50%;padding:11px 14px;color:#7d795f}.profile strong{font-size:12px}.profile small{display:block;color:var(--muted);font-size:10px;margin-top:4px}main{margin-left:237px}header{height:83px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 46px;background:#fff9}.breadcrumb{font-size:11px;color:#8a948d}.breadcrumb span{margin:0 14px;color:#c0c6bd}.breadcrumb b{font-weight:500;color:#536258}.private{font-size:10px;border:1px solid #dde5d9;border-radius:20px;padding:7px 12px;color:#6b866b}.content{max-width:1250px;margin:auto;padding:39px 46px 20px}.heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:31px}.eyebrow{letter-spacing:2px;font-size:9px;font-weight:700;color:#8a9a87}h1{font:600 32px Manrope,Arial,sans-serif;letter-spacing:-1.2px;margin:12px 0}h1 span{color:#a7b98e}.heading p,.card-title p{color:var(--muted);font-size:12px;margin:8px 0}.heading input{background:white;border:1px solid var(--line);padding:11px;border-radius:8px;color:#657668;font-size:12px}.dashboard{display:grid;grid-template-columns:1.9fr 1fr;gap:23px}.card{background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden}.card-title{padding:24px 25px 0;display:flex;align-items:center;justify-content:space-between;gap:12px}h2{font:700 15px Manrope,Arial,sans-serif;margin:0}.text-button{border:0;background:none;color:#6c846c;font-size:11px}.balance-body{display:flex;align-items:center;justify-content:space-around;padding:27px 20px 32px;gap:25px}.ring{width:178px;height:178px;flex-shrink:0;border-radius:50%;background:conic-gradient(#729768 0deg,#edf1e8 0deg);display:grid;place-items:center;transform:rotate(-0deg)}.ring>div{width:148px;height:148px;background:white;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center}.ring small{font-size:8px;letter-spacing:1.8px;color:#929d8c}.ring strong{font:600 39px Manrope,Arial,sans-serif;letter-spacing:-2px;margin:5px}.ring span{color:#9aa492;font-size:11px}.budget-detail{flex:1;max-width:240px}.budget-detail>div{display:flex;align-items:center;gap:8px;padding:15px 0;border-bottom:1px solid var(--line);font-size:11px;color:#879184}.legend-dot{display:inline-block;width:7px;height:7px;border-radius:50%;flex-shrink:0}.green{background:#75996e}.orange{background:#d7ac7b}.budget-detail strong{margin-left:auto;color:#374b37;font-size:16px;white-space:nowrap}.budget-detail strong small{font-size:9px;font-weight:400;color:#8b9487}.budget-detail .budget-note{border:none;font-size:10px;align-items:flex-start;line-height:1.6}.intention{position:relative;padding:25px;background:#eaf0e4;border-color:#e2e9db}.tag{font-size:8px;letter-spacing:1.6px;color:#738468}.intention h2{font:500 28px Manrope,Arial,sans-serif;letter-spacing:-1px;line-height:1.3;margin-top:24px;position:relative}.intention p{color:#85917b;font-size:11px;line-height:1.8}.plant{position:absolute;right:17px;top:29px;font-size:110px;color:#b5c7a1;transform:rotate(18deg)}.intention-footer{border-top:1px solid #d7e1ce;margin-top:22px;padding-top:15px;color:#718565;font-size:10px;display:flex;justify-content:space-between}.meals{margin-top:24px}.count{color:#8d9b85;font:400 10px 'DM Sans',Arial,sans-serif;padding:4px 8px;background:#f1f4ed;border-radius:5px;margin-left:10px}.primary{background:var(--green);color:white;border:0;border-radius:7px;padding:12px 18px;font-size:12px}.primary:hover{background:#1d513c}.meal-tabs{display:flex;gap:22px;border-bottom:1px solid var(--line);padding:17px 25px 0}.meal-tabs button{background:none;border:0;padding:12px 0;color:#94a08f;font-size:11px;border-bottom:2px solid transparent}.meal-tabs .selected{color:var(--green);border-color:var(--green);font-weight:700}.empty{text-align:center;padding:29px;color:#899780}.empty .empty-icon{font-size:27px;color:#adc09f;margin-bottom:8px}.empty strong{display:block;color:#53684d;font-size:13px}.empty p{font-size:11px}.food-row{display:flex;align-items:center;gap:14px;padding:17px 25px;border-bottom:1px solid #f0f2ec}.food-icon{padding:10px 13px;background:#f2f1e7;border-radius:9px;font-size:18px}.food-info{flex:1}.food-info strong{font-size:12px}.food-info small{display:block;margin-top:5px;color:#9aa292;font-size:10px}.food-cal{font-weight:700;font-size:13px}.food-cal small{font-size:10px;font-weight:400;color:#9aa292}.delete{background:none;border:0;color:#9aa292;font-size:19px;padding:8px}.diary-footer{display:flex;justify-content:space-between;padding:17px 25px;background:#fbfcf8;color:#9aa38f;font-size:10px}.diary-footer strong{color:#647459;font-size:11px}.bottom-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:24px;margin-top:24px}.muted{font-size:10px;color:#97a18f}.chart{height:130px;display:flex;align-items:flex-end;justify-content:space-around;gap:12px;margin:16px 24px 0}.chart-col{height:100%;display:flex;flex:1;align-items:center;justify-content:flex-end;flex-direction:column;gap:6px;font-size:9px;color:#9aa38e}.bar-track{height:85px;width:23px;background:#f0f3ec;border-radius:5px;display:flex;align-items:flex-end;overflow:hidden}.bar{width:100%;background:#8eaa7e;border-radius:5px;min-height:0}.chart-key{display:flex;gap:6px;align-items:center;font-size:9px;color:#8a9980;margin:17px 25px 22px}.chart-key .muted{margin-left:auto;font-size:8px}.tip{padding:26px;background:#f5f1e7;border-color:#ede8da}.tip .eyebrow{color:#a0957b}.tip h3{font:600 22px Manrope,Arial,sans-serif;letter-spacing:-.6px;margin:18px 0 10px}.tip p{font-size:11px;line-height:1.9;color:#96917e;max-width:270px}.tip>span{display:block;margin-top:22px;font-size:9px;color:#9b947f}footer{display:flex;align-items:center;gap:15px;margin-top:29px;color:#adb4a5;font-size:9px}footer span:first-child{font-size:16px;font-weight:700;color:#a0ac97}footer span:last-child{margin-left:auto;font-size:8px}dialog{width:440px;max-width:calc(100% - 28px);border:1px solid var(--line);border-radius:15px;padding:28px;color:var(--ink);box-shadow:0 20px 90px #1c352533}dialog::backdrop{background:#19332266;backdrop-filter:blur(3px)}.modal-heading{display:flex;justify-content:space-between;align-items:center}.close{border:0;background:none;font-size:25px;color:#83917a}dialog p{font-size:12px;line-height:1.8;color:#819079}label{display:flex;flex-direction:column;gap:8px;font-size:11px;margin:18px 0;color:#617556}label input,label select{width:100%;padding:12px;border:1px solid #dfe6d9;border-radius:7px;background:white;color:var(--ink)}.form-row{display:flex;gap:15px}.form-row label{width:50%;margin:0}.wide{width:100%;margin-top:23px}.notice{background:#f5f3e9;padding:12px;border-radius:6px}#toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:var(--green);color:white;border-radius:9px;padding:13px 22px;font-size:12px;display:none}.history-day{padding:20px 25px;border-bottom:1px solid var(--line)}.history-day h3{font-size:13px}[hidden]{display:none!important}button:focus-visible,a:focus-visible{outline:3px solid #c3ab75;outline-offset:3px}@media(min-width:1450px){.content{padding-top:48px}}@media(max-width:1100px){aside{width:190px;padding:30px 18px}main{margin-left:190px}.content{padding:30px 24px}header{padding:0 24px}.balance-body{gap:12px}.ring{width:145px;height:145px}.ring>div{width:120px;height:120px}.ring strong{font-size:32px}.budget-detail strong{font-size:13px}.heading h1{font-size:27px}}@media(max-width:800px){aside{position:static;width:auto;padding:18px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:23px}.workspace,.sidebar-bottom{display:none}nav{display:flex}.nav{margin:0;padding:10px}.nav span{font-size:11px}main{margin:0}header{height:55px}.content{padding:26px 18px}.heading{align-items:flex-start;gap:12px}.heading h1{font-size:25px}.heading p{line-height:1.7}.heading input{width:135px;font-size:10px}.dashboard{grid-template-columns:1fr}.intention{display:none}.bottom-grid{grid-template-columns:1fr}.tip{display:none}.balance-body{justify-content:center;gap:30px}.meal-tabs{gap:18px;overflow:auto;white-space:nowrap}.card-title{padding:20px 18px 0}.count{display:none}.breadcrumb{font-size:10px}.private{font-size:8px}footer{flex-wrap:wrap}.food-row{padding:15px 18px}.diary-footer{padding:15px 18px;font-size:9px}}@media(max-width:430px){.nav{gap:0}.nav span{display:none}.heading{flex-direction:column}.heading input{width:auto}.balance-body{gap:18px}.budget-detail{max-width:160px}.card-title h2{font-size:13px}.meal-tabs{gap:20px}.diary-footer span{max-width:170px}.chart-key .muted{display:none}}
+.scan-launch{display:block;width:100%;border:1px solid #dbe5d5;border-radius:8px;background:#f0f5ec;color:var(--green);padding:12px;text-align:center;font-size:12px}.scan-launch:hover{background:#e5efdf}#scan-video{width:100%;max-height:240px;object-fit:cover;background:#17271d;border-radius:9px;margin:14px 0}#scan-status{padding:11px;background:#f2f5ee;border-radius:6px;font-size:11px}#scan-result{border-top:1px solid var(--line);margin-top:20px;padding-top:8px}#scan-result h3{font-size:16px}#scan-result .wide{margin-top:4px}.scanner-credit{font-size:10px!important}.scanner-credit a{color:var(--green)}#barcode-form .wide{margin-top:0}button:disabled{opacity:.5;cursor:wait}#manual-food{display:block;margin:14px auto 0}
+
+</style></head>
+<body>
+<aside><a class="brand" href="#">◒ <span>balance<span class="brand-dot">.</span></span></a><div class="workspace">YOUR SPACE</div><nav><button class="nav active" data-view="today">◫ <span>Overview</span></button><button class="nav" data-view="history">◷ <span>Food history</span></button><button class="nav" id="goals-nav">⚑ <span>My goals</span></button></nav><div class="sidebar-bottom"><div class="leaf">✳</div><strong>Small steps. Real progress.</strong><p>Consistency matters more<br>than a perfect day.</p><div class="profile"><span class="avatar">Y</span><div><strong>Your space</strong><small>Saved on this device</small></div></div></div></aside>
+<main><header><div class="breadcrumb">Your wellness, in balance <span> / </span> <b id="page-label">Overview</b></div><span class="private">● Private & local</span></header><section class="content"><div class="heading"><div><div class="eyebrow">A LITTLE BETTER, EVERY DAY</div><h1>Make room for progress<span>.</span></h1><p>A mindful look at your day. Every small choice adds up.</p></div><input type="date" id="date" aria-label="Selected day"></div>
+<div id="today-view"><div class="dashboard"><section class="card budget"><div class="card-title"><h2>Your daily balance</h2><button class="text-button" id="edit-goal">Edit goal ↗</button></div><div class="balance-body"><div class="ring" id="ring"><div><small id="remaining-label">CALORIES LEFT</small><strong id="remaining">1,800</strong><span>kcal</span></div></div><div class="budget-detail"><div><span class="legend-dot green"></span><span>Daily budget</span><strong id="budget">1,800 <small>kcal</small></strong></div><div><span class="legend-dot orange"></span><span>Food logged</span><strong id="consumed">0 <small>kcal</small></strong></div><div class="budget-note">✧ <span id="encouragement">A fresh start. Fuel your day well.</span></div></div></div></section><section class="card intention"><span class="tag">THE BIG PICTURE</span><div class="plant">✳</div><h2>Progress over<br>perfection.</h2><p>Your calorie budget is a guide.<br>Make space for food you enjoy.</p><div class="intention-footer">One day at a time <span>↗</span></div></section></div>
+<section class="card meals"><div class="card-title"><div><h2>Your food diary <span id="entry-count" class="count">0 entries</span></h2><p>A little awareness goes a long way.</p></div><button class="primary" id="add-food">＋ Log food</button></div><div class="meal-tabs" id="meal-tabs"><button class="selected" data-meal="All">All meals</button><button data-meal="Breakfast">Breakfast</button><button data-meal="Lunch">Lunch</button><button data-meal="Dinner">Dinner</button><button data-meal="Snacks">Snacks</button></div><div id="food-list"></div><div class="diary-footer"><span>Made a choice. Made a little progress.</span><strong id="total">0 kcal total</strong></div></section>
+<div class="bottom-grid"><section class="card week"><div class="card-title"><h2>Your last 7 days</h2><span class="muted">Daily calories</span></div><div id="chart" class="chart"></div><div class="chart-key"><span class="legend-dot green"></span> Food logged <span class="muted">Relative to your daily budget</span></div></section><section class="card tip"><div class="eyebrow">A GENTLE REMINDER</div><h3>Fuel yourself, first.</h3><p>A sustainable deficit leaves room for nourishing meals, rest, and the occasional favorite treat.</p><span>Slow and steady is a good pace. ↗</span></section></div></div>
+<section id="history-view" class="card" hidden><div class="card-title"><h2>Your food history</h2><button class="text-button" id="export">Export CSV ↓</button></div><div id="history-list"></div></section><footer><span>◒ balance</span> A little intention. A healthier you.<span>No subscriptions. No paid APIs.</span></footer></section></main>
+<dialog id="food-dialog"><form id="food-form"><div class="modal-heading"><h2>Log a little nourishment</h2><button type="button" class="close" aria-label="Close">×</button></div><p>Add your food and calories from its label or a trusted source.</p><button type="button" class="scan-launch" id="scan-barcode">▥ Scan a food barcode</button><label>Food name<input name="name" required maxlength="100" placeholder="e.g. Greek yogurt & berries"></label><div class="form-row"><label>Calories (kcal)<input name="calories" type="number" min="1" max="20000" step="1" required placeholder="250"></label><label>Meal<select name="meal"><option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Snacks</option></select></label></div><label>Quick add<select id="quick-food"><option value="">Choose a common food (optional)</option><option value="Banana|105">Banana, medium · ~105 kcal</option><option value="Egg|78">Egg, large · ~78 kcal</option><option value="Cooked rice|205">Cooked rice, 1 cup · ~205 kcal</option><option value="Greek yogurt|100">Plain nonfat Greek yogurt, 170g · ~100 kcal</option></select></label><small class="muted">Quick-add values are estimates. Check your serving size.</small><button class="primary wide">Add to diary</button></form></dialog>
+<dialog id="goal-dialog"><form id="goal-form"><div class="modal-heading"><h2>Your daily calorie budget</h2><button type="button" class="close" aria-label="Close">×</button></div><p>Set a daily target that suits your needs. The initial 1,800 kcal is a placeholder, not a personalized recommendation.</p><label>Daily budget (kcal)<input name="goal" type="number" min="1" max="20000" required></label><p class="notice">Calorie needs vary. A qualified healthcare professional can help you choose an appropriate target. This app does not provide medical advice.</p><button class="primary wide">Save budget</button></form></dialog><dialog id="scan-dialog"><div class="modal-heading"><h2>Scan a food barcode</h2><button type="button" class="close" aria-label="Close scanner">×</button></div><p>Scan the barcode on a package, or type its number below.</p><video id="scan-video" playsinline muted hidden></video><button type="button" class="scan-launch" id="start-camera">Start camera</button><form id="barcode-form" novalidate><label>Barcode number<input id="barcode-number" inputmode="numeric" required maxlength="32" placeholder="e.g. 3017620422003"></label><button type="submit" class="primary wide" id="lookup-barcode" disabled>Loading scanner…</button></form><p id="scan-status" role="status" aria-live="polite" aria-atomic="true">The scanner is loading. If this message stays, reload the page and make sure you have the latest app files.</p><section id="scan-result" hidden><h3 id="product-name"></h3><p id="product-details"></p><label>Amount eaten (<span id="portion-unit">g</span>)<input id="portion-amount" type="number" min="0.1" max="20000" step="0.1" value="100"></label><p id="portion-calories"></p><label>Meal<select id="scan-meal"><option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Snacks</option></select></label><button type="button" class="primary wide" id="use-product">Add food to diary</button></section><p class="scanner-credit">Food data: <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener noreferrer">Open Food Facts</a> (ODbL). Coverage and nutrition accuracy vary. Verify the package label. Only the barcode is sent for lookup; camera images stay on your device.</p><button type="button" class="text-button" id="manual-food">Enter food manually instead</button></dialog><div id="toast" role="status"></div><script>
+const $ = s => document.querySelector(s);
+const key = 'balance-diary-v1';
+let state = {goal:1800, entries:[]};
+let storageAvailable = true;
+try {const saved=JSON.parse(localStorage.getItem(key));if(saved && Number.isFinite(saved.goal) && saved.goal>0 && Array.isArray(saved.entries))state={goal:saved.goal,entries:saved.entries.filter(e=>e&&typeof e.name==='string'&&typeof e.date==='string'&&Number.isFinite(e.calories)&&e.calories>0)};}catch{storageAvailable=false;}
+const localDate = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+$('#date').value=localDate(new Date());
+let meal='All';
+const fmt=n=>n.toLocaleString();
+const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function toast(message){$('#toast').textContent=message;$('#toast').style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').style.display='none',3000);}
+function save(){try{localStorage.setItem(key,JSON.stringify(state));}catch{storageAvailable=false;toast('Storage unavailable. Changes last only in this tab.');}render();}
+function row(e){return `<div class="food-row"><span class="food-icon">${({Breakfast:'◔',Lunch:'◒',Dinner:'◕',Snacks:'✧'})[e.meal]||'◒'}</span><div class="food-info"><strong>${escapeHtml(e.name)}</strong><small>${escapeHtml(e.meal||'Food')}</small></div><span class="food-cal">${fmt(e.calories)} <small>kcal</small></span><button class="delete" data-delete="${escapeHtml(e.id)}" aria-label="Delete ${escapeHtml(e.name)}">×</button></div>`;}
+function render(){const day=$('#date').value;const entries=state.entries.filter(e=>e.date===day);const calories=entries.reduce((n,e)=>n+e.calories,0);const remaining=state.goal-calories;$('#remaining').textContent=fmt(Math.abs(remaining));$('#remaining-label').textContent=remaining<0?'OVER BUDGET':'CALORIES LEFT';$('#budget').innerHTML=`${fmt(state.goal)} <small>kcal</small>`;$('#consumed').innerHTML=`${fmt(calories)} <small>kcal</small>`;$('#ring').style.background=`conic-gradient(${remaining<0?'#c3926c':'#729768'} ${Math.min(calories/state.goal,1)*360}deg,#edf1e8 0deg)`;$('#encouragement').textContent=calories===0?'A fresh start. Fuel your day well.':remaining<0?'One day is only part of the picture.':'Keep making space for nourishing choices.';$('#entry-count').textContent=`${entries.length} ${entries.length===1?'entry':'entries'}`;const filtered=entries.filter(e=>meal==='All'||e.meal===meal);$('#food-list').innerHTML=filtered.length?filtered.map(row).join(''):`<div class="empty"><div class="empty-icon">♧</div><strong>${entries.length?'Nothing in this meal yet':'Your day is a fresh page'}</strong><p>Log your ${entries.length?'next':'first'} meal and start building a little awareness.</p><button class="text-button" id="empty-add">＋ Add food to your diary</button></div>`;$('#total').textContent=`${fmt(calories)} kcal total`;$('#chart').innerHTML=Array.from({length:7},(_,i)=>{const d=new Date(day+'T12:00:00');d.setDate(d.getDate()-6+i);const total=state.entries.filter(e=>e.date===localDate(d)).reduce((n,e)=>n+e.calories,0);return `<div class="chart-col" title="${localDate(d)}: ${total} kcal"><span>${total?fmt(total):'—'}</span><div class="bar-track"><div class="bar" style="height:${Math.min(100,total/state.goal*100)}%"></div></div><span>${d.toLocaleDateString(undefined,{weekday:'short'})}</span></div>`}).join('');const days=[...new Set(state.entries.map(e=>e.date))].sort().reverse();$('#history-list').innerHTML=days.length?days.map(d=>`<div class="history-day"><h3>${escapeHtml(d)} · ${fmt(state.entries.filter(e=>e.date===d).reduce((n,e)=>n+e.calories,0))} kcal</h3>${state.entries.filter(e=>e.date===d).map(row).join('')}</div>`).join(''):'<div class="empty"><strong>No food logged yet</strong><p>Your logged meals will appear here.</p></div>';}
+function openFood(){const form=$('#food-form');form.reset();if(meal!=='All')form.elements.meal.value=meal;$('#food-dialog').showModal();}
+$('#add-food').onclick=openFood;
+document.addEventListener('click',e=>{if(e.target.closest('#empty-add'))openFood();const del=e.target.closest('[data-delete]');if(del){state.entries=state.entries.filter(x=>String(x.id)!==del.dataset.delete);save();toast('Entry removed');}});
+$('#food-form').onsubmit=e=>{e.preventDefault();const data=new FormData(e.target);state.entries.push({id:crypto.randomUUID(),name:data.get('name').trim(),calories:Number(data.get('calories')),meal:data.get('meal'),date:$('#date').value});save();$('#food-dialog').close();toast('Food added to your diary');};
+$('#quick-food').onchange=e=>{if(!e.target.value)return;const [name,calories]=e.target.value.split('|');$('#food-form').elements.name.value=name;$('#food-form').elements.calories.value=calories;};
+function openGoal(){$('#goal-form').elements.goal.value=state.goal;$('#goal-dialog').showModal();}
+$('#edit-goal').onclick=openGoal;$('#goals-nav').onclick=openGoal;
+$('#goal-form').onsubmit=e=>{e.preventDefault();state.goal=Number(new FormData(e.target).get('goal'));save();$('#goal-dialog').close();toast('Daily budget updated');};
+document.querySelectorAll('.close').forEach(b=>b.onclick=()=>b.closest('dialog').close());
+$('#date').onchange=()=>{if(!$('#date').value)$('#date').value=localDate(new Date());render();};
+$('#meal-tabs').onclick=e=>{const b=e.target.closest('[data-meal]');if(!b)return;meal=b.dataset.meal;document.querySelectorAll('[data-meal]').forEach(x=>x.classList.toggle('selected',x===b));render();};
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x===b));$('#today-view').hidden=b.dataset.view!=='today';$('#history-view').hidden=b.dataset.view!=='history';$('#page-label').textContent=b.dataset.view==='today'?'Overview':'Food history';});
+$('#export').onclick=()=>{const csvCell=s=>'"'+String(s).replace(/"/g,'""')+'"';const csv=['Date,Food,Meal,Calories',...state.entries.map(e=>[e.date,/^[=+@\-\t\r]/.test(e.name)?"'"+e.name:e.name,e.meal,e.calories].map(csvCell).join(','))].join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='balance-food-diary.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+render();if(!storageAvailable)toast('Storage unavailable. Changes last only in this tab.');
+
+</script><script>
+// Camera frames stay local. Only validated barcode digits go to Open Food Facts.
+(() => {
+  const dialog = $('#scan-dialog');
+  const video = $('#scan-video');
+  const status = $('#scan-status');
+  let stream = null, session = 0, request = null, product = null;
+  const message = text => {
+    status.textContent = text;
+    if (dialog.open) status.scrollIntoView({block:'nearest'});
+  };
+  function setLoading(loading) {
+    $('#lookup-barcode').disabled = loading;
+    $('#lookup-barcode').textContent = loading ? 'Searching…' : 'Find food';
+    $('#barcode-form').setAttribute('aria-busy', String(loading));
+  }
+  function stopCamera() {
+    session++;
+    if (stream) stream.getTracks().forEach(track => track.stop());
+    stream = null;
+    video.srcObject = null;
+    video.hidden = true;
+    $('#start-camera').disabled = false;
+  }
+  function cancelLookup() {
+    if (request) request.abort();
+    request = null;
+    setLoading(false);
+  }
+  dialog.addEventListener('close', () => { stopCamera(); cancelLookup(); });
+  $('#scan-barcode').onclick = () => {
+    stopCamera(); cancelLookup(); product = null;
+    $('#scan-result').hidden = true;
+    $('#barcode-form').reset();
+    $('#scan-meal').value = $('#food-form').elements.meal.value;
+    message('Start your camera or enter the barcode number. Not every product is in the database.');
+    dialog.showModal();
+  };
+  $('#manual-food').onclick = () => { dialog.close(); $('#food-form').elements.name.focus(); };
+  $('#start-camera').onclick = async () => {
+    stopCamera();
+    const current = session;
+    $('#start-camera').disabled = true;
+    try {
+      if (!window.isSecureContext || !navigator.mediaDevices?.getUserMedia) throw new Error('Camera access needs HTTPS or localhost. You can still type the barcode below.');
+      if (!('BarcodeDetector' in window)) throw new Error('This browser does not support camera barcode scanning. Try Chrome on Android, or enter the barcode below.');
+      const supported = await BarcodeDetector.getSupportedFormats();
+      if (current !== session || !dialog.open) return;
+      const formats = ['ean_13','ean_8','upc_a','upc_e'].filter(f => supported.includes(f));
+      if (!formats.length) throw new Error('Food barcode scanning is unavailable in this browser. Enter the barcode below.');
+      const detector = new BarcodeDetector({formats});
+      const camera = await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'}},audio:false});
+      if (current !== session || !dialog.open) { camera.getTracks().forEach(t => t.stop()); return; }
+      stream = camera; video.srcObject = camera; video.hidden = false;
+      await video.play();
+      message('Hold the entire barcode steady in view, with good lighting.');
+      const detect = async () => {
+        if (current !== session || !dialog.open) return;
+        try {
+          const codes = await detector.detect(video);
+          if (current !== session) return;
+          const code = codes.find(c => /^(?:\d{8}|\d{12,14})$/.test(c.rawValue));
+          if (code) { $('#barcode-number').value = code.rawValue; stopCamera(); lookup(code.rawValue); return; }
+        } catch { /* A frame may not yet be available. Keep scanning. */ }
+        if (current === session) setTimeout(detect, 250);
+      };
+      detect();
+    } catch (error) {
+      if (current !== session) return;
+      stopCamera();
+      message(error.name === 'NotAllowedError' ? 'Camera permission was denied. Allow camera access in your browser, or enter the barcode below.' : error.name === 'NotFoundError' ? 'No camera was found. Enter the barcode below.' : error.message || 'Camera unavailable. Enter the barcode below.');
+    }
+  };
+  async function lookup(code) {
+    if (!/^(?:\d{8}|\d{12,14})$/.test(code)) { message('Enter an 8, 12, 13, or 14 digit food barcode.'); return; }
+    stopCamera(); cancelLookup(); product = null;
+    $('#scan-result').hidden = true;
+    const controller = new AbortController(); request = controller;
+    setLoading(true);
+    message('Looking up this barcode in Open Food Facts…');
+    const timeout = setTimeout(() => controller.abort(), 12000);
+    try {
+      const response = await fetch(`https://world.openfoodfacts.org/api/v2/product/${encodeURIComponent(code)}.json?fields=product_name,brands,nutriments,nutrition_data_per,serving_size`, {signal:controller.signal});
+      if (response.status === 404) throw new Error('This barcode is not in the database yet. Enter the food and its label calories manually.');
+      if (!response.ok) throw new Error('Food lookup is unavailable right now. Try again or enter the food manually.');
+      const data = await response.json();
+      if (request !== controller || !dialog.open) return;
+      if (data.status !== 1 || !data.product) throw new Error('This barcode is not in the database yet. Enter the food and its label calories manually.');
+      const p = data.product, n = p.nutriments || {};
+      const number = value => value !== '' && value != null && Number.isFinite(Number(value)) && Number(value) >= 0 ? Number(value) : null;
+      let energy = number(n['energy-kcal_100g']);
+      if (energy === null) { const kj = number(n.energy_100g); if (kj !== null && n.energy_unit === 'kJ') energy = kj / 4.184; }
+      if (energy === null) throw new Error(`${p.product_name || 'Product found'}, but calorie information is missing. Check the package and enter it manually.`);
+      // OFF normalizes nutrition to 100 g (or 100 ml for liquids); require the user to verify the unit.
+      product = {name:String(p.product_name || 'Scanned food').slice(0,100),energy};
+      $('#product-name').textContent = product.name;
+      $('#product-details').textContent = `${p.brands ? p.brands + ' · ' : ''}${Math.round(energy)} kcal per 100 g / 100 ml. Use grams for solids or millilitres for liquids; verify the label. ${p.serving_size ? 'Label serving: ' + p.serving_size + '.' : ''}`;
+      $('#portion-unit').textContent = 'g or ml, as labeled';
+      $('#portion-amount').value = 100;
+      $('#scan-result').hidden = false;
+      updatePortion();
+      message('Product found. Adjust the amount you ate and confirm the nutrition label.');
+    } catch (error) {
+      if (request === controller && dialog.open) message(error.name === 'AbortError' ? 'Lookup timed out. Check your connection and try again, or enter food manually.' : error instanceof TypeError ? 'Cannot reach the food database. Check your connection or enter food manually.' : error.message);
+    } finally {
+      clearTimeout(timeout);
+      if (request === controller) { request = null; setLoading(false); }
+    }
+  }
+  function updatePortion() {
+    if (!product) return;
+    const input = $('#portion-amount');
+    const calories = Math.round(product.energy * Number(input.value) / 100);
+    $('#portion-calories').textContent = input.checkValidity() ? `${fmt(calories)} kcal for this amount` : 'Enter an amount between 0.1 and 20,000.';
+    $('#use-product').disabled = !input.checkValidity() || calories < 1 || calories > 20000;
+    if (input.checkValidity() && calories < 1) $('#portion-calories').textContent += ' — below 1 kcal; this diary logs whole calories.';
+  }
+  $('#portion-amount').oninput = updatePortion;
+  $('#barcode-form').onsubmit = e => {
+    e.preventDefault();
+    const code = $('#barcode-number').value.replace(/[\s-]/g, '');
+    $('#barcode-number').value = code;
+    lookup(code);
+  };
+  $('#use-product').onclick = () => {
+    if (!product || $('#use-product').disabled) return;
+    updatePortion();
+    if ($('#use-product').disabled) return;
+    state.entries.push({
+      id: crypto.randomUUID(), name: product.name,
+      calories: Math.round(product.energy * Number($('#portion-amount').value) / 100),
+      meal: $('#scan-meal').value, date: $('#date').value
+    });
+    save();
+    dialog.close();
+    $('#food-dialog').close();
+    toast('Food added to your diary');
+  };
+  dialog.querySelector('.close').onclick = () => dialog.close();
+  setLoading(false);
+  message('Ready. Type every digit printed beneath the barcode, including leading zeros.');
+})();
+
+</script></body></html>
